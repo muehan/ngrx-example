@@ -1,5 +1,5 @@
-export public interface Company {
-    public name:string;
-    public email:string;
-    public phone:number;
+export interface Company {
+    name: string;
+    email: string;
+    phone: number;
 }
