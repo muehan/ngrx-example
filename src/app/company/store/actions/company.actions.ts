@@ -10,10 +10,10 @@ export class LoadCompaniesAction implements Action {
     constructor() { }
 }
 
-export class LoadCompaniesSucessAction implements Action {
+export class LoadCompaniesSuccessAction implements Action {
     readonly type = LOAD_COMPANIES_SUCCESS;
 
     constructor(public payload: Company[]) { }
 }
 
-export type Action = LoadCompaniesAction | LoadCompaniesSucessAction;
+export type Action = LoadCompaniesAction | LoadCompaniesSuccessAction;

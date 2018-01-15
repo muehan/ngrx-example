@@ -4,9 +4,9 @@
     <th>Email</th>
     <th>Phone</th>
   </tr>
-  <tr>
-    <td>Any Company</td>
-    <td>info@any.com</td>
-    <td>1234</td>
+  <tr *ngFor='let company of companies$ | async'>
+    <td>{{company.name}}</td>
+    <td>{{company.email}}</td>
+    <td>{{company.phone}}</td>
   </tr>
 </table>

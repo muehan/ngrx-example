@@ -9,6 +9,10 @@ import { ROUTES } from './app.routes';
 import { NavigationComponent } from './navigation/navigation.component';
 import { StoreModule } from '@ngrx/store';
 import { companyReducer } from './company/store/reducers/company.reducer';
+import { EffectsModule } from '@ngrx/effects';
+
+import { CompanyEffects } from './company/store/effects';
+import { CompanyService } from './service/company.service';
 
 @NgModule({
   declarations: [
@@ -20,8 +24,11 @@ import { companyReducer } from './company/store/reducers/company.reducer';
     BrowserModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     StoreModule.forRoot({companies: companyReducer}),
+    EffectsModule.forRoot([CompanyEffects]),
   ],
-  providers: [],
+  providers: [
+    CompanyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
