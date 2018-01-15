@@ -7,6 +7,8 @@ import { CompanyComponent } from './company/company.component';
 
 import { ROUTES } from './app.routes';
 import { NavigationComponent } from './navigation/navigation.component';
+import { StoreModule } from '@ngrx/store';
+import { companyReducer } from './company/store/reducers/company.reducer';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { NavigationComponent } from './navigation/navigation.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    StoreModule.forRoot({companies: companyReducer}),
   ],
   providers: [],
   bootstrap: [AppComponent]
