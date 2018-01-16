@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { StoreModule } from '@ngrx/store';
 import { companyReducer } from './company/store/reducers/company.reducer';
 import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { CompanyEffects } from './company/store/effects';
 import { CompanyService } from './service/company.service';
@@ -25,6 +26,7 @@ import { CompanyService } from './service/company.service';
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     StoreModule.forRoot({companies: companyReducer}),
     EffectsModule.forRoot([CompanyEffects]),
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [
     CompanyService
