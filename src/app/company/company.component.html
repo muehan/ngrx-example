@@ -3,10 +3,12 @@
     <th>Name</th>
     <th>Email</th>
     <th>Phone</th>
+    <th></th>
   </tr>
   <tr *ngFor='let company of companies$ | async'>
     <td>{{company.name}}</td>
     <td>{{company.email}}</td>
     <td>{{company.phone}}</td>
+    <td><button class="btn btn-default" (click)="deleteCompany(company.id)">Delete</button></td>
   </tr>
 </table>

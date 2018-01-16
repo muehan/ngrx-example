@@ -27,4 +27,8 @@ export class CompanyComponent implements OnInit {
     this.store.dispatch(new companyActions.LoadCompaniesAction());
   }
 
+  deleteCompany(companyId: number){
+    console.log("delete company: " + companyId);
+    this.store.dispatch(new companyActions.DeleteCompanyAction(companyId))
+  }
 }
