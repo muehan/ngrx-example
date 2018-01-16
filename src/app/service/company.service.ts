@@ -38,4 +38,10 @@ export class CompanyService {
 
         return Observable.of(deletedCompany);
     }
+
+    public createCompany(company: Company): Observable<Company> {
+        this.companies.push(company);
+
+        return Observable.of(company);
+    }
 }

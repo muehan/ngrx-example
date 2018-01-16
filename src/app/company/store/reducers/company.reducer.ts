@@ -9,6 +9,9 @@ export function companyReducer(state = [], action: companyActions.Action){
         case companyActions.DELETE_COMPANY_SUCCESS: {
             return state.filter(company => company.id !== action.payload);
         }
+        case companyActions.CREATE_COMPANY_SUCCESS: {
+            return state.push(action.payload);
+        }
         default: {
             return state;
         }

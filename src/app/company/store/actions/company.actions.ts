@@ -3,9 +3,10 @@ import { Company } from '../../../models';
 
 export const LOAD_COMPANIES = 'LOAD_COMPANIES';
 export const LOAD_COMPANIES_SUCCESS = 'LOAD_COMPANIES_SUCCESS';
-
 export const DELETE_COMPANY = 'DELETE_COMPANY';
 export const DELETE_COMPANY_SUCCESS = 'DELETE_COMPANY_SUCCESS';
+export const CREATE_COMPANY = 'CREATE_COMPANY';
+export const CREATE_COMPANY_SUCCESS = 'CREATE_COMPANY_SUCCESS';
 
 
 export class LoadCompaniesAction implements Action {
@@ -32,4 +33,22 @@ export class DeleteCompanySuccessAction implements Action {
     constructor(public payload: number) { }
 }
 
-export type Action = LoadCompaniesAction | LoadCompaniesSuccessAction | DeleteCompanyAction | DeleteCompanySuccessAction;
+export class CreateCompanyAction implements Action {
+    readonly type = CREATE_COMPANY;
+
+    constructor(public payload: Company){}
+}
+
+export class CreateCompanySuccessAction implements Action {
+    readonly type = CREATE_COMPANY_SUCCESS;
+
+    constructor(public payload: Company){};
+}
+
+export type Action
+    = LoadCompaniesAction
+    | LoadCompaniesSuccessAction
+    | DeleteCompanyAction
+    | DeleteCompanySuccessAction
+    | CreateCompanyAction
+    | CreateCompanySuccessAction;
