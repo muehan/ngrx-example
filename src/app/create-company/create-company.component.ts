@@ -22,13 +22,18 @@ export class CreateCompanyComponent implements OnInit {
   ngOnInit() {
   }
 
-  public createCompany() {
+  public createCompany(event) {
+    event.preventDefault();
     var company: Company = {
       id: -1,
       name: this.companyName,
       email: this.companyEmail,
       phone: this.companyPhone
     }
+
+    this.companyName = "";
+    this.companyEmail = "";
+    this.companyPhone = null;
 
     this.store.dispatch(new companyActions.CreateCompanyAction(company));
   }

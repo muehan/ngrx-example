@@ -39,8 +39,7 @@ export class CompanyService {
         return Observable.of(deletedCompany);
     }
 
-    public createCompany(company: Company): Observable<Company> {
-
+    public createCompany(company: Company): Observable<Company> {        
         var maxId = 0;
         this.companies.map(c => {
             if (c.id > maxId) { maxId = c.id }
@@ -48,7 +47,7 @@ export class CompanyService {
 
         maxId++;
         company.id = maxId;
-        this.companies.push(company);
+        this.companies = this.companies.concat(company);
 
         return Observable.of(company);
     }
