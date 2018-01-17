@@ -11,7 +11,7 @@ import * as companyActions from './../store'
 })
 export class CompanyComponent implements OnInit {
 
-  private companies$: Observable<any>;
+  public companies$: Observable<any>;
 
   constructor(
     private store: Store<AppState>

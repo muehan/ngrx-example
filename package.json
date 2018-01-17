@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build:prod": "ng build -prod -aot -d https://infot2.migrosluzern.ch/sites/andre/SiteAssets/ngrx-companylist",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

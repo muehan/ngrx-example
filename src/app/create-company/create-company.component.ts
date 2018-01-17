@@ -11,9 +11,9 @@ import * as companyActions from './../store'
 })
 export class CreateCompanyComponent implements OnInit {
 
-  private companyName: string;
-  private companyEmail: string;
-  private companyPhone: number;
+  public companyName: string;
+  public companyEmail: string;
+  public companyPhone: number;
 
   constructor(
     private store: Store<AppState>
