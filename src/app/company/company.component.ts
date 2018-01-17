@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../models/app-state';
 import { Observable } from 'rxjs/Observable';
-import * as companyActions from './store'
+import * as companyActions from './../store'
 
 @Component({
   selector: 'app-company',

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { CompanyService } from '../../../service/company.service';
+import { CompanyService } from './../../service/company.service';
 import { Effect, Actions } from '@ngrx/effects';
 import * as companyActions from './../actions';
-import { Company } from './../../../models';
+import { Company } from './../../models';
 
 import 'rxjs/add/operator/switchMap';
 

@@ -1,0 +1,15 @@
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Company name</span>
+  <input type="text" class="form-control" id="companyName" aria-describedby="basic-addon1" [(ngModel)]="companyName">
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon2">Company email</span>
+  <input type="text" class="form-control" id="companyEmail" aria-describedby="basic-addon2" [(ngModel)]="companyEmail">
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon3">Company phone</span>
+  <input type="text" class="form-control" id="companyPhone" aria-describedby="basic-addon3" [(ngModel)]="companyPhone">
+</div>
+<div class="input-group">
+  <button class="btn btn-primary" (click)="createCompany()">Add</button>
+</div>

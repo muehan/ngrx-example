@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Company } from '../../../models';
+import { Company } from '../../models';
 
 export const LOAD_COMPANIES = 'LOAD_COMPANIES';
 export const LOAD_COMPANIES_SUCCESS = 'LOAD_COMPANIES_SUCCESS';

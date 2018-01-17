@@ -40,6 +40,14 @@ export class CompanyService {
     }
 
     public createCompany(company: Company): Observable<Company> {
+
+        var maxId = 0;
+        this.companies.map(c => {
+            if (c.id > maxId) { maxId = c.id }
+        });
+
+        maxId++;
+        company.id = maxId;
         this.companies.push(company);
 
         return Observable.of(company);
